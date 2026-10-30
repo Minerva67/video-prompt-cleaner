@@ -4,6 +4,14 @@
 
 这个 skill 删掉提示词里所有关于「用什么技术做」的内容，只保留「片子是什么样」的内容。
 
+## 示例
+
+3 条虚构的产品短片提示词，共删除 21 处技术痕迹，逐字核对 0 处改动。下图是对照网页：左边原文，右边删除线标出删掉的部分。
+
+完整文件：[examples/compare.html](examples/compare.html)（对照网页）、[examples/prompts.xlsx](examples/prompts.xlsx)（输入）、[examples/cleaned.xlsx](examples/cleaned.xlsx)（输出）
+
+![示例截图](examples/preview.jpg)
+
 ## 适合什么时候用
 
 - 做多模型视频评测，需要一套公平的提示词
@@ -54,6 +62,7 @@ pip3 install openpyxl
 - `references/deletion-rules.md`：删除规则和边界情况示例
 - `scripts/extract_column.py`：把表格中的一列导出为单独的文本文件
 - `scripts/verify_and_report.py`：逐字核对、扫描残留、写回表格、生成对照网页
+- `examples/`：示例产出和截图
 
 ## 安装
 

@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Prompt cleaning review</title>
+<style>*{box-sizing:border-box}body{margin:0;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f4f5f7;color:#1a1a1a}
+header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid #e2e4e8;padding:14px 22px}header h1{margin:0 0 6px;font-size:16px}.sub{font-size:13px;color:#666;line-height:1.6}
+.navbar{padding:8px 22px;background:#fbfbfc;border-bottom:1px solid #eee;font-size:13px;line-height:2}.navbar a{color:#2563c9;text-decoration:none;margin-right:6px}
+section{padding:14px 22px;border-bottom:8px solid #eceef1}section h2{margin:0 0 10px;font-size:15px}.cnt{font-size:12px;color:#888;font-weight:400;margin-left:6px}.bad{font-size:12px;color:#fff;background:#c0392b;padding:1px 8px;border-radius:10px;margin-left:6px}.res{font-size:12px;color:#7a5c00;background:#fff2cc;padding:1px 8px;border-radius:10px;margin-left:6px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0}.col{padding:12px 16px;min-width:0}.col.r{border-left:1px solid #e2e4e8;background:#fcfcfd}.tag{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#999;margin-bottom:8px}
+pre{margin:0;white-space:pre-wrap;word-break:break-word;font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;line-height:1.7}
+.del{color:#c0392b;text-decoration:line-through;background:#fdeaea;border-radius:3px;padding:0 1px;cursor:help}.del sup{font-size:9px;color:#8a1f14;text-decoration:none;margin-left:1px}
+.ins{background:#8e44ad;color:#fff;border-radius:3px;padding:0 2px}.rep{background:#f39c12;color:#000;border-radius:3px;padding:0 2px}
+#tt{position:fixed;max-width:380px;background:#1f2430;color:#f5f6f8;padding:11px 13px;border-radius:9px;box-shadow:0 8px 26px rgba(0,0,0,.28);font-size:13px;line-height:1.5;z-index:50;pointer-events:none;opacity:0;transition:opacity .1s}#tt .id{font-size:11px;color:#e0a800;margin-bottom:5px}
+</style></head><body>
+<header><h1>Prompt cleaning review — 3 prompts · 21 spans deleted · 0 violations</h1>
+<div class="sub"><b style="color:#c0392b">red strike</b> = deleted technical content (numbered, hover for why); <b style="color:#8e44ad">purple</b>/<b style="color:#f39c12">orange</b> = cleaner added/changed text (violations, must fix). Kept text is byte-for-byte identical to the original.</div></header>
+<div class="navbar"><a href="#r2">row2</a> <a href="#r3">row3</a> <a href="#r4">row4</a></div><section id="r2"><h2>row2 <span class="cnt">8 deleted</span></h2>
+<div class="grid"><div class="col l"><div class="tag">original</div><pre>Kettlewick — &quot;Tea at the exact degree&quot; · 15s · 16:9
+Look: warm morning kitchen, soft diffused light from a window on the left. Palette #F4EDE2 (oat), #2F4A3A (pine), #D98C4A (copper).
+
+SHOT 1 · [DIFF] · 0:00–0:04
+Base [Diffusion]: overhead of a hand placing a matte pine-green kettle on a walnut counter; a thin curl of steam rises.
+VO: &quot;Good tea starts with the right temperature.&quot;
+
+SHOT 2 · [CODE] · 0:04–0:08
+A circular dial draws in around the kettle lid (Remotion + GSAP timeline), digits roll from 20° to 80° and lock.
+On-screen text: &quot;80° for green tea&quot;
+
+SHOT 3 · [HYB] · 0:08–0:12
+Overlay [Code-gen]: three temperature chips slide in beside the pour — &quot;70° white&quot;, &quot;80° green&quot;, &quot;95° black&quot;. Diffusion plate of amber tea filling a glass cup, camera at counter height.
+VO: &quot;Pick a tea. It handles the rest.&quot;
+
+SHOT 4 · 0:12–0:15
+End card on oat background: Kettlewick wordmark in pine, copper underline, tagline &quot;Tea at the exact degree.&quot;
+
+**Stack:** Remotion for type and dial, Veo for the kitchen plates, final grade in a Kling upscale pass.</pre></div>
+<div class="col r"><div class="tag">cleaned (red = deleted; hover for reason)</div><pre>Kettlewick — &quot;Tea at the exact degree&quot; · 15s · 16:9
+Look: warm morning kitchen, soft diffused light from a window on the left. Palette #F4EDE2 (oat), #2F4A3A (pine), #D98C4A (copper).
+
+SHOT 1 · <span class="del" data-id="row2-1" data-rs="Bracket render tag — names which paradigm/technique renders this shot.">[DIFF] · <sup>row2-1</sup></span>0:00–0:04
+<span class="del" data-id="row2-2" data-rs="Bracket render tag — names which paradigm/technique renders this shot.">Base [Diffusion]: <sup>row2-2</sup></span>overhead of a hand placing a matte pine-green kettle on a walnut counter; a thin curl of steam rises.
+VO: &quot;Good tea starts with the right temperature.&quot;
+
+SHOT 2 · <span class="del" data-id="row2-3" data-rs="Bracket render tag — names which paradigm/technique renders this shot.">[CODE] · <sup>row2-3</sup></span>0:04–0:08
+A circular dial draws in around the kettle lid<span class="del" data-id="row2-4" data-rs="Engine / tech-stack / model name — a specific implementation tool."> (Remotion + GSAP timeline)<sup>row2-4</sup></span>, digits roll from 20° to 80° and lock.
+On-screen text: &quot;80° for green tea&quot;
+
+SHOT 3 · <span class="del" data-id="row2-5" data-rs="Bracket render tag — names which paradigm/technique renders this shot.">[HYB] · <sup>row2-5</sup></span>0:08–0:12
+<span class="del" data-id="row2-6" data-rs="Bracket render tag — names which paradigm/technique renders this shot.">Overlay [Code-gen]: <sup>row2-6</sup></span>three temperature chips slide in beside the pour — &quot;70° white&quot;, &quot;80° green&quot;, &quot;95° black&quot;.<span class="del" data-id="row2-7" data-rs="Paradigm / model word (diffusion / code-gen / hybrid) — biases toward a model."> Diffusion plate of<sup>row2-7</sup></span> amber tea filling a glass cup, camera at counter height.
+VO: &quot;Pick a tea. It handles the rest.&quot;
+
+SHOT 4 · 0:12–0:15
+End card on oat background: Kettlewick wordmark in pine, copper underline, tagline &quot;Tea at the exact degree.&quot;<span class="del" data-id="row2-8" data-rs="Engine / tech-stack / model name — a specific implementation tool.">
+
+**Stack:** Remotion for type and dial, Veo for the kitchen plates, final grade in a Kling upscale pass.<sup>row2-8</sup></span></pre></div></div></section>
+<section id="r3"><h2>row3 <span class="cnt">6 deleted</span></h2>
+<div class="grid"><div class="col l"><div class="tag">original</div><pre>FERNHOP TRAIL 2 — Product film, 20s, 1080×1920 portrait
+Tone: brisk, muddy, honest. Palette: #1E2B24 forest, #C6F04D lime, #EDEAE0 bone.
+
+Scene 1 · Ridge at dawn (0:00–0:05) · [Hybrid]
+Low side angle of a runner&#x27;s shoes hitting a wet rocky ridge, mist behind, a diffused grey dawn sky. Camera tracks at ankle height.
+VO: &quot;Built for the part of the trail nobody photographs.&quot;
+
+Scene 2 · The outsole (0:05–0:10) · [3D]
+**3D beat:** R3F scene. The shoe turns a slow 3/4 orbit on a bone background; the lug pattern lights up lime, callout &quot;5 mm lugs&quot; pinned to the heel.
+
+Scene 3 · Mud test (0:10–0:15) · [Diffusion]
+Close overhead of the shoe sinking into dark mud and pulling free clean. Slow motion, 0.5×.
+On-screen text: &quot;Sheds mud in two strides&quot;
+
+Scene 4 · End (0:15–0:20) · [CODE]
+FERNHOP wordmark draws on in lime over forest green; CTA &quot;Run the ugly miles.&quot;
+
+Technical Notes
+- Generate scenes 1 and 3 with Kling or Veo text-to-video; Scene 2 built in Three.js with GSAP easing.
+- Hybrid composite: diffusion plate first, code-gen overlay second.</pre></div>
+<div class="col r"><div class="tag">cleaned (red = deleted; hover for reason)</div><pre>FERNHOP TRAIL 2 — Product film, 20s, 1080×1920 portrait
+Tone: brisk, muddy, honest. Palette: #1E2B24 forest, #C6F04D lime, #EDEAE0 bone.
+
+Scene 1 · Ridge at dawn (0:00–0:05)<span class="del" data-id="row3-1" data-rs="Bracket render tag — names which paradigm/technique renders this shot."> · [Hybrid]<sup>row3-1</sup></span>
+Low side angle of a runner&#x27;s shoes hitting a wet rocky ridge, mist behind, a diffused grey dawn sky. Camera tracks at ankle height.
+VO: &quot;Built for the part of the trail nobody photographs.&quot;
+
+Scene 2 · The outsole (0:05–0:10)<span class="del" data-id="row3-2" data-rs="Bracket render tag — names which paradigm/technique renders this shot."> · [3D]<sup>row3-2</sup></span>
+<span class="del" data-id="row3-3" data-rs="Engine / tech-stack / model name — a specific implementation tool.">**3D beat:** R3F scene. <sup>row3-3</sup></span>The shoe turns a slow 3/4 orbit on a bone background; the lug pattern lights up lime, callout &quot;5 mm lugs&quot; pinned to the heel.
+
+Scene 3 · Mud test (0:10–0:15)<span class="del" data-id="row3-4" data-rs="Bracket render tag — names which paradigm/technique renders this shot."> · [Diffusion]<sup>row3-4</sup></span>
+Close overhead of the shoe sinking into dark mud and pulling free clean. Slow motion, 0.5×.
+On-screen text: &quot;Sheds mud in two strides&quot;
+
+Scene 4 · End (0:15–0:20)<span class="del" data-id="row3-5" data-rs="Bracket render tag — names which paradigm/technique renders this shot."> · [CODE]<sup>row3-5</sup></span>
+FERNHOP wordmark draws on in lime over forest green; CTA &quot;Run the ugly miles.&quot;<span class="del" data-id="row3-6" data-rs="Engine / tech-stack / model name — a specific implementation tool.">
+
+Technical Notes
+- Generate scenes 1 and 3 with Kling or Veo text-to-video; Scene 2 built in Three.js with GSAP easing.
+- Hybrid composite: diffusion plate first, code-gen overlay second.<sup>row3-6</sup></span></pre></div></div></section>
+<section id="r4"><h2>row4 <span class="cnt">7 deleted</span></h2>
+<div class="grid"><div class="col l"><div class="tag">original</div><pre>Quillo — app launch teaser · 15s · 16:9 · 24fps
+Purpose: Feed this file into a hybrid render pipeline. Each scene is tagged with a render method.
+
+[00:00–00:03] [CODE] Cream paper background #FFF8EC. A handwritten line &quot;meeting notes, again?&quot; scribbles on, then crosses itself out in coral #FF6B57.
+VO: &quot;Notes you actually read twice.&quot;
+
+[00:03–00:08] [CODE] Phone frame centered; three note cards stack and auto-sort into &quot;Today&quot;, &quot;Ideas&quot;, &quot;Follow up&quot; (Remotion + D3 for the sort animation). Ink #22223B.
+
+[00:08–00:12] [DIFF] Over-the-shoulder of a commuter on a morning train, phone in hand, soft window light; the screen is a plain glow, to be replaced in post.
+VO: &quot;Quillo files them while you ride.&quot;
+
+[00:12–00:15] [CODE] Logo lockup &quot;Quillo&quot; in ink on cream, coral underline, CTA &quot;Free to download&quot;.
+
+Production note (pipeline): render code-gen scenes at 60fps then conform to 24fps; diffusion shots via Sora or Veo, 3 takes each, pick best.</pre></div>
+<div class="col r"><div class="tag">cleaned (red = deleted; hover for reason)</div><pre>Quillo — app launch teaser · 15s · 16:9 · 24fps
+<span class="del" data-id="row4-1" data-rs="Paradigm / model word (diffusion / code-gen / hybrid) — biases toward a model.">Purpose: Feed this file into a hybrid render pipeline. Each scene is tagged with a render method.
+<sup>row4-1</sup></span>
+[00:00–00:03<span class="del" data-id="row4-2" data-rs="Bracket render tag — names which paradigm/technique renders this shot.">] [CODE<sup>row4-2</sup></span>] Cream paper background #FFF8EC. A handwritten line &quot;meeting notes, again?&quot; scribbles on, then crosses itself out in coral #FF6B57.
+VO: &quot;Notes you actually read twice.&quot;
+
+[00:03–00:08] <span class="del" data-id="row4-3" data-rs="Bracket render tag — names which paradigm/technique renders this shot.">[CODE] <sup>row4-3</sup></span>Phone frame centered; three note cards stack and auto-sort into &quot;Today&quot;, &quot;Ideas&quot;, &quot;Follow up&quot;<span class="del" data-id="row4-4" data-rs="Engine / tech-stack / model name — a specific implementation tool."> (Remotion + D3 for the sort animation)<sup>row4-4</sup></span>. Ink #22223B.
+
+[00:08–00:12<span class="del" data-id="row4-5" data-rs="Bracket render tag — names which paradigm/technique renders this shot.">] [DIFF<sup>row4-5</sup></span>] Over-the-shoulder of a commuter on a morning train, phone in hand, soft window light; the screen is a plain glow, to be replaced in post.
+VO: &quot;Quillo files them while you ride.&quot;
+
+[00:12–00:15] <span class="del" data-id="row4-6" data-rs="Bracket render tag — names which paradigm/technique renders this shot.">[CODE] <sup>row4-6</sup></span>Logo lockup &quot;Quillo&quot; in ink on cream, coral underline, CTA &quot;Free to download&quot;.<span class="del" data-id="row4-7" data-rs="Engine / tech-stack / model name — a specific implementation tool.">
+
+Production note (pipeline): render code-gen scenes at 60fps then conform to 24fps; diffusion shots via Sora or Veo, 3 takes each, pick best.<sup>row4-7</sup></span></pre></div></div></section><div id="tt"></div>
+<script>const tt=document.getElementById('tt');document.querySelectorAll('.del').forEach(el=>{
+el.addEventListener('mouseenter',()=>{tt.innerHTML='<div class="id">'+el.dataset.id+'</div><div>'+el.dataset.rs+'</div>';tt.style.opacity='1';});
+el.addEventListener('mousemove',e=>{let x=e.clientX+15,y=e.clientY+15;const w=tt.offsetWidth,h=tt.offsetHeight;if(x+w>innerWidth)x=e.clientX-w-15;if(y+h>innerHeight)y=e.clientY-h-15;tt.style.left=x+'px';tt.style.top=y+'px';});
+el.addEventListener('mouseleave',()=>tt.style.opacity='0');});</script></body></html>
